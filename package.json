@@ -1,0 +1,23 @@
+{
+  "name": "akamai-staging-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhiljay/Akamai-staging-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhiljay/Akamai-staging-proxy/issues"
+  },
+  "homepage": "https://github.com/akhiljay/Akamai-staging-proxy#readme",
+  "dependencies": {
+    "http-proxy": "^1.11.1",
+    "url": "^0.10.3"
+  }
+}
