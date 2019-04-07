@@ -36,6 +36,8 @@ Unzip the file to a location in your laptop
 
 2.2.2 Click on "Load Unpacked" and select the folder of the unpacked zip file
 
+> The Chrome extension is now installed in your browser
+
 ## Step 3: Configure the "Akamai-staging-proxy" server with your Akamai staging enviornment settings
 
 The server accepts a JSON input to the path '/api-staging/insert'. The node server will only route the hostnames you mentioned in your JSON input to the required destination, the rest of the hostnames that goes via the server will be set to pass through mode. The JSON input has the following format
