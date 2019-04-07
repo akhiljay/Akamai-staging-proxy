@@ -83,7 +83,7 @@ If the server is configured correctly you will get a 200 OK with the response "F
 Now all your browser traffic is being proxies via the Akamai-staging-proxy server that you have running locally
 
 
-![alt-text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/google-proxy-extension.png)
 
 ## You are all Set! 
 Additional Notes:
