@@ -85,7 +85,7 @@ else{
   
 }
 
-}).listen(80);  //this is the port your clients will connect to
+}).listen(443);  //this is the port your clients will connect to
 
 server.addListener('connect', function (req, socket, bodyhead) {
     var StagingHost = req.headers;
