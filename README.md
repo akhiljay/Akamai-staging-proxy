@@ -73,6 +73,7 @@ If the server is configured correctly you will get a 200 OK with the response "F
 < Transfer-Encoding: chunked
 <
 * Connection #0 to host 127.0.0.1 left intact
+Field inserted
 ````
 
 ## Step 4: Configure your Chrome browser to send traffic to the server
