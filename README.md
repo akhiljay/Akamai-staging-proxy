@@ -4,7 +4,7 @@ A Node based http(s) proxy that can be configured to point to Akamai staging env
 Maintained by Akhil Jayaprakash @ Akamai Technologies [Twitter](https://twitter.com/akhiljp_dev)
 
 
-## Step 1: Install the proxy server locally 
+## Step 1: Install the "Akamai-staging-proxy" server locally 
 
 #### 1.1: Clone this repo locally
 ````
@@ -36,7 +36,7 @@ Unzip the file to a location in your laptop
 
 2.2.2 Click on "Load Unpacked" and select the folder of the unpacked zip file
 
-## Step 3: Configure the server with your Akamai staging enviornment settings
+## Step 3: Configure the "Akamai-staging-proxy" server with your Akamai staging enviornment settings
 
 The server accepts a JSON input to the path '/api-staging/insert'. The node server will only route the hostnames you mentioned in your JSON input to the required destination, the rest of the hostnames that goes via the server will be set to pass through mode. The JSON input has the following format
 ```json
