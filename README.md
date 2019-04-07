@@ -32,7 +32,7 @@ This extension helps you securely send traffic over to the node server running l
 Unzip the file to a location in your laptop
 
 #### 2.2 Install the extension in Chrome
-2.2.1 Visit chrome://extensions and enable developer mode (it's a switch on the right hand corner of the page)
+2.2.1 Visit "chrome://extensions" and enable developer mode (it's a switch on the right hand corner of the page)
 
 2.2.2 Click on "Load Unpacked" and select the folder of the unpacked zip file
 
