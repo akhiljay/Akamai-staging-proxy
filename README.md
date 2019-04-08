@@ -38,6 +38,10 @@ Click [here](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpj
 
 
 
+
+
+
+
 ## Usage Instructions
 
 ### Step 1: Configure "Akamai-staging-proxy" extension with your Akamai staging enviornment settings
