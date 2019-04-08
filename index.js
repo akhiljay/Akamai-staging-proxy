@@ -10,8 +10,10 @@ var net = require('net');
 var loki = require('lokijs');
 const bodyParser = require('body-parser');
 
+
 // create application/json parser
 var jsonParser = bodyParser.json()
+
 
 var db = new loki('hostmap.db');
 var children = db.addCollection('clients',{indices:['host']},{disableChangesApi:false})
@@ -34,11 +36,12 @@ var getHostPortFromString = function (hostString, defaultPort) {
   };
   
 
+
 var server = http.createServer(function (req, res) {
 
 //if a request comes in for insert then add it to loki db 
 if  (req.url == '/api-staging/insert') {
-   // console.log("matched on path");
+    //console.log("matched on path");
 if (req.method == 'POST'){
     //console.log("matched on POST");
     var body = "";
@@ -51,11 +54,14 @@ if (req.method == 'POST'){
         if (body != null){
           var parsed = JSON.parse(body);
           insertintoloki(parsed);
-          //console.log("completed1" + parsed.apiserver);
+          //console.log("completed1" + parsed.hosts);
           res.writeHead(200, {'Content-Type': 'text/html'})
           res.end('Field inserted')
         } 
     });
+}
+else {
+  console.log ("didn't match on POST");
 }
 }
 else{
@@ -85,7 +91,7 @@ else{
   
 }
 
-}).listen(80);  //this is the port your clients will connect to
+}).listen(5050);  //this is the port your clients will connect to
 
 server.addListener('connect', function (req, socket, bodyhead) {
     var StagingHost = req.headers;
@@ -139,16 +145,18 @@ server.addListener('connect', function (req, socket, bodyhead) {
 
 });
 
-function insertintoloki(object_body){
+var insertintoloki = function(object_body){
   //insert the values into LokiDB
+  //console.log("inserloki"+ object_body.hosts);
   for (var i in object_body.hosts){
-   // console.log("JSON NODe"+i);
+   //console.log("JSON NODe"+i);
     var apiinserthost = object_body.hosts[i].apihost;
     var apiinsertserver = object_body.hosts[i].apiserver;
     //console.log("apiinserthost" + apiinserthost);
-   // console.log("apiinsertserver" +apiinsertserver);
+   //console.log("apiinsertserver" +apiinsertserver);
     children.insert({host:apiinserthost, stagingserver: apiinsertserver});
   }
   //console.log(db.serializeChanges(['clients']));
 
 };
+

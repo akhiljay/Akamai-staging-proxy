@@ -1,7 +1,7 @@
 {
   "name": "akamai-staging-proxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node HTTP(s) proxy that runs on port 5050 to helps Akamai customers test their traffic on Akamai staging network",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,16 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/akhiljay/Akamai-staging-proxy.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Akhil Jayaprakash @ Akamai",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/akhiljay/Akamai-staging-proxy/issues"
   },
   "homepage": "https://github.com/akhiljay/Akamai-staging-proxy#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "connect": "^3.6.6",
     "express": "^4.16.4",
     "http-proxy": "^1.11.1",
+    "http-proxy-auth": "0.0.1",
     "lokijs": "^1.5.6",
     "url": "^0.10.3"
   }
