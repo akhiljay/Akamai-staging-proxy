@@ -32,7 +32,10 @@ node index.js
 ### Step 2: Install Google Example Chrome Proxy Extension
 This extension helps you securely send traffic over to the node server running locally. This combination allows for both HTTP and HTTPS traffic
 
-Click [here](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpjaajiaje/) to download the chrome extension.
+Click [here](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpjaajiaje/) to download the chrome extension. 
+
+[![Click here to install the extension ](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/available-chrome.png)](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpjaajiaje/)
+
 
 
 ## Usage Instructions
