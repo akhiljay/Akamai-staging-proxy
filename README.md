@@ -48,23 +48,24 @@ For example:
 ![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/proxy-usage-1.png)
 
 
-### Step 3: Click save proxy settings to start routing chrome browser traffic to Akamai Staging 
-
-> You can configure proxy settings for incognito windows as well. In order to do that you will need to first allow the extension to access incognito window
-
+### Step 3: Click "save proxy settings" to start routing chrome browser traffic to Akamai Staging 
 
 ![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/proxy-usage-2.png)
 Now all your browser traffic is being proxies via the Akamai-staging-proxy server that you have running locally
 
+> Note: You can configure proxy settings for incognito windows as well. In order to do that you will need to first allow the extension to access incognito window
+
 ## You are all Set! 
+Tweet at me [here](https://twitter.com/akhiljp_dev)  if you like the extension 
 Additional Notes:
 
 > * You can always revert back your Chrome browser's proxy settings by selecting "Use the system's proxy settings" within the google proxy extension
 
 > * You can keep the node server running if you wish, but if you may wish to stop it anytime by clicking on CRTL-C
 
-
-
+## Credits
+1. Chrome Extension code from Mike West @ google
+2. Node HTTP server based on [Node Proxy Server](https://github.com/nodejitsu/node-http-proxy) Charlie Robbins, Jarrett Cruger & the Contributors.
 
 
 
