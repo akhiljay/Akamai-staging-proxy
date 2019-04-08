@@ -57,6 +57,7 @@ Now all your browser traffic is being proxies via the Akamai-staging-proxy serve
 
 ## You are all Set! 
 Tweet at me [here](https://twitter.com/akhiljp_dev)  if you like the extension 
+
 Additional Notes:
 
 > * You can always revert back your Chrome browser's proxy settings by selecting "Use the system's proxy settings" within the google proxy extension
