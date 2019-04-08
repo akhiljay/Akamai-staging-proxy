@@ -32,7 +32,7 @@ node index.js
 ### Step 2: Install Google Example Chrome Proxy Extension
 This extension helps you securely send traffic over to the node server running locally. This combination allows for both HTTP and HTTPS traffic
 
-Click [here](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpjaajiaje/) to download the chrome extension code
+Click [here](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpjaajiaje/) to download the chrome extension.
 
 
 ## Usage Instructions
@@ -48,12 +48,13 @@ For example:
 ![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/proxy-usage-1.png)
 
 
-### Step 3: Click save to start routing chrome browser traffic to Akamai Staging 
+### Step 3: Click save proxy settings to start routing chrome browser traffic to Akamai Staging 
 
-Now all your browser traffic is being proxies via the Akamai-staging-proxy server that you have running locally
+> You can configure proxy settings for incognito windows as well. In order to do that you will need to first allow the extension to access incognito window
 
 
 ![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/proxy-usage-2.png)
+Now all your browser traffic is being proxies via the Akamai-staging-proxy server that you have running locally
 
 ## You are all Set! 
 Additional Notes:
