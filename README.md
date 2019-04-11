@@ -10,22 +10,13 @@ Maintained by Akhil Jayaprakash @ Akamai Technologies [Twitter](https://twitter.
 
 ### Step 1: Install the "Akamai-staging-proxy" server locally 
 
-#### 1.1: Clone this repo locally
+#### 1.1: Install the server by typing the command below in terminal
 ````
-git clone https://github.com/akhiljay/Akamai-staging-proxy.git
+npm install -g akamai-staging-proxy
 ````
-> Navigate to the folder
+#### 1.3: Run Node server by typing the command below in terminal
 ````
-cd Akamai-staging-proxy
-````
-
-#### 1.2: Install all dependencies needed for the server
-````
-npm install
-````
-#### 1.3: Run Node server
-````
-node index.js
+akamai-staging-proxy
 ````
 > The server is now running on localhost:5050
 

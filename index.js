@@ -1,7 +1,4 @@
-//  Install npm dependencies first
-//  npm init
-//  npm install --save url@0.10.3
-//  npm install --save http-proxy@1.11.1
+#! /usr/local/bin/node
 
 var httpProxy = require("http-proxy");
 var http = require("http");
@@ -91,7 +88,10 @@ else{
   
 }
 
-}).listen(5050);  //this is the port your clients will connect to
+}).listen(5050, () => {
+  console.log ("--> Akamai-staging-proxy is now running on 127.0.0.1:5050");
+  console.log("--> *you may now use the Akamai-staging-proxy chrome extension to route requests to Akamai's staging network")
+});  //this is the port your clients will connect to
 
 server.addListener('connect', function (req, socket, bodyhead) {
     var StagingHost = req.headers;
