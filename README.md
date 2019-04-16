@@ -4,7 +4,7 @@ A Node based http(s) proxy that can be configured to point to Akamai staging env
 
 Maintained by Akhil Jayaprakash @ Akamai Technologies [Twitter](https://twitter.com/akhiljp_dev)
 
-![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/proxy-screenshot.png)
+![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/propxy-screenshot.png)
 
 ## Installation Guide
 
