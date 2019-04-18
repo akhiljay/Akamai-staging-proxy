@@ -1,6 +1,6 @@
 {
   "name": "akamai-staging-proxy",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Node HTTP(s) proxy that runs on port 5050 to helps Akamai customers test their traffic on Akamai staging network",
   "main": "index.js",
   "author": {

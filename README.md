@@ -36,12 +36,16 @@ Click [here](https://chrome.google.com/webstore/detail/cginnnkpamdfapidljgnkkjpj
 ## Usage Instructions
 
 ### Step 1: Configure "Akamai-staging-proxy" extension with your Akamai staging enviornment settings
-Enter multiple hostname:staging-hostname combination into the  separated by a comma
+Enter multiple hostname staging-hostname combination into the  separated by a comma
 For example:
 
-1. For single hostname & staging hostname combination enter : www.foo.com:www.foo.com.edgekey-staging.net
+1. For single hostname & staging hostname combination enter : www.foo.com=www.foo.com.edgekey-staging.net
 
-2. For multiple hostnames & staging hostnames combination enter : www.foo.com:www.foo.com.edgekey-staging.net,static.foo.com:static.foo.edgekey-staging.net
+Notice the equals to "=" sign that separates the hostname you wish to send over to the staging environment. 
+
+2. For multiple hostnames & staging hostnames combination enter : www.foo.com=www.foo.com.edgekey-staging.net,static.foo.com=127.0.0.1:9550
+
+> If you have a particular port you wish to send the traffic to you may do so by mentioning the port as part of the settings within the chrome extension.
 
 ![alt-text](https://github.com/akhiljay/Akamai-staging-proxy/blob/master/proxy-usage-1.png)
 
@@ -57,6 +61,8 @@ Now all your browser traffic is being proxies via the Akamai-staging-proxy serve
 Tweet at me [here](https://twitter.com/akhiljp_dev)  if you like the extension 
 
 Additional Notes:
+
+> * If you are trying to use the chrome extension along with the Akamai Sandbox, then forward your hostname of interest to the sandbox by adding the following instruction "www.foo.com=127.0.0.1:9550" where 127.0.0.1 is the host IP address where the sandbox client is running and the port 9550 is the sandbox client port
 
 > * You can always revert back your Chrome browser's proxy settings by selecting "Use the system's proxy settings" within the google proxy extension
 

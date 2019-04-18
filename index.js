@@ -61,15 +61,24 @@ else {
   console.log ("didn't match on POST");
 }
 }
+
+//logic for proxying http requests starts here
 else{
     var urlObj = url.parse(req.url);
     var hostPort = getHostPortFromString(req.url, 80);
     var stagingdomain = children.findOne( {host:urlObj.host} ) ;
     if (stagingdomain != null){
         console.log("not null");
-        //console.log("sd"+stagingdomain.stagingserver);
+        console.log("sd"+stagingdomain.stagingserver);
+        console.log("sp"+stagingdomain.stagingport);
         var target2 = stagingdomain.stagingserver;
-        var target1 = "http://" + target2;
+        if (stagingdomain.sandboxport != null){
+          var targetport = stagingdomain.sandboxport;
+          var target1 = "http://" + target2 + ":" + targetport;
+        }
+        else {
+          var target1 = "http://" + target2;
+        }
     }
     else {
         console.log("is null");
@@ -93,23 +102,32 @@ else{
   console.log("--> *you may now use the Akamai-staging-proxy chrome extension to route requests to Akamai's staging network")
 });  //this is the port your clients will connect to
 
+//proxying for https requests starts here
 server.addListener('connect', function (req, socket, bodyhead) {
     var StagingHost = req.headers;
     //console.log(StagingHost);
+    //enter logic to check if loki has a port redefined
     var hostPort = getHostPortFromString(req.url, 443);
     var stagingdomain = children.findOne( {host:hostPort[0]} ) ;
+
     //console.log("lokiDB"+stagingdomain);
     if (stagingdomain != null){
         //console.log("not null");
         //console.log(stagingdomain);
         var hostDomain = stagingdomain.stagingserver;
+        if (stagingdomain.sandboxport != null){
+          var port = stagingdomain.sandboxport;
+        }
+        else {
+           port = parseInt(hostPort[1]);
+        }
     }
     else {
         //console.log("is null");
         //console.log(stagingdomain);
         var hostDomain = hostPort[0];
+        port = parseInt(hostPort[1]);
     }
-    var port = parseInt(hostPort[1]);
     console.log("Proxying HTTPS request for:", hostDomain, port);
     var proxySocket = new net.Socket();
     proxySocket.connect(port, hostDomain, function () {
@@ -152,9 +170,10 @@ var insertintoloki = function(object_body){
    //console.log("JSON NODe"+i);
     var apiinserthost = object_body.hosts[i].apihost;
     var apiinsertserver = object_body.hosts[i].apiserver;
+    var apiinsertserverport = object_body.hosts[i].apiport;
     //console.log("apiinserthost" + apiinserthost);
    //console.log("apiinsertserver" +apiinsertserver);
-    children.insert({host:apiinserthost, stagingserver: apiinsertserver});
+    children.insert({host:apiinserthost, stagingserver: apiinsertserver, sandboxport: apiinsertserverport});
   }
   //console.log(db.serializeChanges(['clients']));
 
